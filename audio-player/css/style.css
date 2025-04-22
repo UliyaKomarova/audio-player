@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  background: #c9c9c9;
+}
+
+a {
+  color: #2d2d2d;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #db2b42;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 700px;
+  height: 440px;
+  background: #e8e8e8;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 37px -1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 37px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 37px -1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.player__media-block {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.player__media-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  right: 0;
+  height: 94px;
+  /* background: rgb(234, 90, 116, 0.5); */
+  background: rgb(138, 213, 221, 0.5);
+}
+
+.player-list {
+  height: 100%;
+}
+
+.player-list._next-audio {
+  margin-top: -360px;
+}
+
+.player-list-item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.player__video {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.player-list-item__background {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player__image {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.player__text {
+  position: relative;
+  padding: 20px;
+  z-index: 2;
+}
+
+.player__name {
+  padding: 0 0 10px;
+  font-size: 24px;
+  color: #db2b42;
+  text-shadow: 1px 1px 1px #2d2d2d;
+}
+
+.player__song {
+  font-size: 20px;
+  color: #2d2d2d;
+  text-shadow: 1px 1px 2px hsl(0, 0%, 79%);
+  /* color: #6cb8bc;
+  text-shadow: 1px 1px 2px #2d2d2d; */
+}
+
+.player-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+  background: #f8f9fc;
+}
+
+.player__button-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.player__button {
+  width: 60px;
+  height: 60px;
+  /* background-color: #efefef; */
+  background-color: hsl(186, 55%, 70%);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  outline: 2px solid #ffffff;
+  outline-offset: -4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.player__button:hover {
+  background-color: hsl(186, 55%, 50%);
+}
+
+._prev {
+  rotate: 180deg;
+}
+
+._prev,
+._next {
+  width: 50px;
+  height: 50px;
+  background-size: 50%;
+  background-image: url("../assets/icons/next.svg");
+  background-position: 14px center;
+}
+
+._play {
+  background-image: url("../assets/icons/play.svg");
+}
+
+._pause {
+  background-image: url(../assets/icons/pause.svg);
+  background-size: 50%;
+}
+
+/* .player-controls__progress-bar {
+  width: 250px;
+} */
+
+.progress-bar__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.progress-bar__progress,
+.progress-bar__end {
+  font-size: 14px;
+  transition: all 0.3 ease;
+}
+
+.progress-bar {
+  width: 373px;
+  appearance: none;
+  background: #e8e8e8;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 2px 0px #8ad5dd;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #db2b42;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: -310px 0 0 300px #c9c9c9;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  height: 100px;
+}
+
+.footer-item {
+  display: inline-block;
+}
+
+._rs-school {
+  width: 50px;
+  height: 50px;
+  background: url("../assets/icons/rss-logo.svg") 0 0 no-repeat;
+}

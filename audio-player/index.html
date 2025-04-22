@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>js30#1.2-audio-player</title>
+  </head>
+  <body>
+    <div class="player">
+      <div class="player__media-block">
+        <div class="player-list">
+          <div class="player-list-item active">
+            <!-- <img
+              class="player-list-item__background"
+              src="./assets/03.jpg"
+              alt=""
+            /> -->
+            <video
+              class="player__video"
+              src="./assets/video/2.mp4"
+              preload="auto"
+              no-controls
+              loop
+              muted
+            ></video>
+            <audio
+              class="player__audio"
+              src="./assets/music/Harry_Styles-Watermelon_Sugar.mp3"
+            ></audio>
+            <img class="player__image" src="./assets/1.jpeg" alt="" />
+            <div class="player__text">
+              <div class="player__name">Harry Styles</div>
+              <div class="player__song">Watermelon Sugar</div>
+            </div>
+          </div>
+          <div class="player-list-item">
+            <!-- <img
+              class="player-list-item__background"
+              src="./assets/00.jpg"
+              alt=""
+            /> -->
+            <video
+              class="player__video"
+              src="./assets/video/1.mp4"
+              preload="auto"
+              no-controls
+              loop
+              muted
+            ></video>
+            <audio
+              class="player__audio"
+              src="./assets/music/Harry_Styles-As_It_Was.mp3"
+            ></audio>
+            <img class="player__image" src="./assets/2.jpg" alt="" />
+            <div class="player__text">
+              <div class="player__name">Harry Styles</div>
+              <div class="player__song">As It Was</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="player-controls">
+        <div class="player__button-list">
+          <div class="player__button _prev" id="prevButton"></div>
+          <div class="player__button _play" id="playAndPauseButton"></div>
+          <div class="player__button _next" id="nextButton"></div>
+        </div>
+
+        <div class="player-controls__progress-bar progress-bar__wrapper">
+          <div class="progress-bar__progress">0:00</div>
+          <input
+            class="progress-bar"
+            type="range"
+            id="audioProgress"
+            min="0"
+            max="100"
+            step="0.0001"
+            value="0"
+          />
+          <div class="progress-bar__end">0:00</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <a class="footer-item" href="https://github.com/UliyaKomarova"
+        >Uliya Komarova</a
+      >
+      <div class="footer-item">2024</div>
+      <a
+        class="footer-item _rs-school"
+        href="https://rs.school/courses/javascript-preschool-ru"
+      ></a>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>
